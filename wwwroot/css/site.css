@@ -28,6 +28,26 @@ body {
     min-height: 100vh;
 }
 
+.app-footer {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.app-footer-inner {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
 /* ===== APP SHELL ===== */
 .app-shell {
     min-height: 100vh;
@@ -617,6 +637,15 @@ body {
 @media (max-width: 576px) {
     body {
         font-size: 0.95rem;
+    }
+
+    .app-footer {
+        padding: 1rem;
+    }
+
+    .app-footer-inner {
+        flex-direction: column;
+        text-align: center;
     }
 
     .landing-card {
