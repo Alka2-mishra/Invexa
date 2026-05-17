@@ -2,22 +2,79 @@
     ViewData["Title"] = "Invexa - Smart Inventory & Billing Platform";
 }
 
-<section class="landing-main">
-    <div class="landing-wrap">
-        <div class="landing-card">
-            <h1>Invexa</h1>
-            <p style="font-size: 1.3rem; color: var(--muted); margin-bottom: 0.5rem;">Smart Inventory & Billing Platform</p>
-            <p style="color: #64748b; font-size: 1rem; margin-bottom: 2rem; line-height: 1.8;">
-                Streamline your business operations. Track inventory in real-time, manage multiple suppliers,
-                create professional invoices, and gain actionable insights into your revenue—all from one beautiful dashboard.
-            </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                <a class="btn btn-primary btn-lg" asp-controller="Account" asp-action="Login">Sign In</a>
-                <a class="btn btn-outline-primary btn-lg" asp-controller="Account" asp-action="Register">Create Account</a>
+<section class="landing-shell">
+    <div class="landing-main-copy">
+        <span class="landing-badge">Inventory, billing, and reporting in one place</span>
+        <h1>Run your stock and invoices from one polished workspace.</h1>
+        <p class="landing-lead">
+            Invexa helps you track products, suppliers, invoices, and revenue without the clutter.
+            Start with a clean dashboard, seeded demo data, and a login flow that is ready to use.
+        </p>
+
+        <div class="landing-actions">
+            <a class="btn btn-primary btn-lg" asp-controller="Account" asp-action="Login">Sign In</a>
+            <a class="btn btn-outline-primary btn-lg" asp-controller="Account" asp-action="Register">Create Account</a>
+        </div>
+
+        <div class="landing-metrics">
+            <div class="metric-card">
+                <span>Inventory visibility</span>
+                <h3>Real-time</h3>
             </div>
-            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 1.5rem;">
-                ✓ No credit card required • ✓ Free to start • ✓ Enterprise-ready
-            </p>
+            <div class="metric-card">
+                <span>Seeded demo data</span>
+                <h3>Ready now</h3>
+            </div>
+            <div class="metric-card">
+                <span>Business views</span>
+                <h3>Dashboard + Reports</h3>
+            </div>
         </div>
     </div>
+
+    <div class="landing-aside">
+        <div class="landing-preview">
+            <div class="preview-header">
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+                <span class="preview-dot"></span>
+            </div>
+            <div class="preview-panel">
+                <div class="preview-stat">
+                    <span>Low stock alerts</span>
+                    <strong>3 items</strong>
+                </div>
+                <div class="preview-stat">
+                    <span>Monthly revenue</span>
+                    <strong>$42,800</strong>
+                </div>
+                <div class="preview-stat">
+                    <span>Open invoices</span>
+                    <strong>18</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="landing-features">
+            <div class="feature-pill">Inventory tracking</div>
+            <div class="feature-pill">Supplier management</div>
+            <div class="feature-pill">Invoice creation</div>
+            <div class="feature-pill">Revenue reports</div>
+        </div>
+    </div>
+</section>
+
+<section class="landing-grid">
+    <article class="landing-feature-card">
+        <h3>Built for clarity</h3>
+        <p>See the numbers that matter first with a dashboard that highlights stock levels, invoices, and revenue.</p>
+    </article>
+    <article class="landing-feature-card">
+        <h3>Simple workflows</h3>
+        <p>Manage products, categories, suppliers, and invoices with a straightforward interface that stays out of your way.</p>
+    </article>
+    <article class="landing-feature-card">
+        <h3>Professional output</h3>
+        <p>Use the reports page to make quick decisions and present clean summaries to your team or customers.</p>
+    </article>
 </section>
