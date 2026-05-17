@@ -200,15 +200,6 @@ The main objective of Invexa is to provide a complete inventory and billing solu
 
 ---
 
-# Live Demo
-
-## Live Application Link
-
-Add your deployed project URL here.
-
-Example:
-
-* Live Demo: [https://your-live-project-link.com](https://your-live-project-link.com)
 
 ## GitHub Repository Link
 
@@ -216,7 +207,7 @@ Add your GitHub repository URL here.
 
 Example:
 
-* GitHub Repository: [https://github.com/your-username/invexa](https://github.com/your-username/invexa)
+* GitHub Repository: https://github.com/Alka2-mishra/Invexa.git
 
 ---
 
