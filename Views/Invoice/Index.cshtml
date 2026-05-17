@@ -1,0 +1,37 @@
+@model IEnumerable<Invoice>
+@{
+    ViewData["Title"] = "Invoices";
+}
+
+<div class="d-flex justify-content-between mb-3">
+    <h5 class="mb-0">Invoice History</h5>
+    <a class="btn btn-primary" asp-action="Create">Create Invoice</a>
+</div>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th class="text-end">Amount</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var invoice in Model)
+        {
+            <tr>
+                <td>@invoice.Id</td>
+                <td>@invoice.InvoiceDate.ToLocalTime().ToString("dd MMM yyyy")</td>
+                <td>@(string.IsNullOrWhiteSpace(invoice.CustomerName) ? "Walk-in" : invoice.CustomerName)</td>
+                <td>@invoice.Items.Count</td>
+                <td class="text-end">@invoice.TotalAmount.ToString("C")</td>
+                <td class="text-center">
+                    <a asp-action="Print" asp-route-id="@invoice.Id" class="btn btn-sm btn-outline-primary">Print View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

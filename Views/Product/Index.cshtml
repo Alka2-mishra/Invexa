@@ -1,0 +1,43 @@
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="d-flex flex-wrap gap-2 justify-content-between mb-3">
+    <form method="get" class="d-flex gap-2">
+        <input type="text" name="searchString" value="@ViewBag.SearchString" class="form-control" placeholder="Search product" />
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+    <a class="btn btn-primary" asp-action="Create">Add Product</a>
+</div>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Supplier</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>@item.Category?.Name</td>
+                <td>@item.Supplier?.Name</td>
+                <td class="text-center text-nowrap">
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary">View</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
